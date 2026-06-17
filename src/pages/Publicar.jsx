@@ -150,10 +150,16 @@ const handleSubmit = async (e) => {
             onChange={(e) => setForm({ ...form, carrera: e.target.value })}
           >
             <option value="">Selecciona</option>
-            <option value="Sistemas">Ing. Sistemas</option>
-            <option value="Electrónica">Ing. Electrónica</option>
-            <option value="Civil">Ing. Civil</option>
-            <option value="Industrial">Ing. Industrial</option>
+            <option value="Sistemas">Ingeniería de Sistemas</option>
+                  <option value="Electrónica">Ingeniería Electrónica</option>
+                  <option value="Civil">Ingeniería Civil</option>
+                  <option value="Industrial">Ingeniería Industrial</option>
+                  <option value="Mecánica">Ingeniería Mecánica</option>
+                  <option value="Química">Ingeniería Química</option>
+                  <option value="Arquitectura">Arquitectura</option>
+                  <option value="Computacion">Ingeniería de Computación</option>
+                  <option value="Telecomunicaciones">Ingeniería de Telecomunicaciones</option>
+        
           </select>
         </div>
         
