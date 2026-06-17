@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
+import { SecurityProvider } from "./context/SecurityContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -13,38 +14,40 @@ function App() {
   return (
     <Router>
       <ThemeProvider>
-        <AuthProvider>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/catalogo" element={<Catalogo />} />
-              <Route 
-                path="/publicar" 
-                element={
-                  <ProtectedRoute>
-                    <Publicar />
-                  </ProtectedRoute>
-                } 
-              />
-              <Route 
-                path="/mis-intercambios" 
-                element={
-                  <ProtectedRoute>
-                    <MisIntercambios />
-                  </ProtectedRoute>
-                } 
-              />
-              <Route 
-                path="/perfil" 
-                element={
-                  <ProtectedRoute>
-                    <Perfil />
-                  </ProtectedRoute>
-                } 
-              />
-            </Routes>
-          </Layout>
-        </AuthProvider>
+        <SecurityProvider>
+          <AuthProvider>
+            <Layout>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/catalogo" element={<Catalogo />} />
+                <Route 
+                  path="/publicar" 
+                  element={
+                    <ProtectedRoute>
+                      <Publicar />
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/mis-intercambios" 
+                  element={
+                    <ProtectedRoute>
+                      <MisIntercambios />
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/perfil" 
+                  element={
+                    <ProtectedRoute>
+                      <Perfil />
+                    </ProtectedRoute>
+                  } 
+                />
+              </Routes>
+            </Layout>
+          </AuthProvider>
+        </SecurityProvider>
       </ThemeProvider>
     </Router>
   );
