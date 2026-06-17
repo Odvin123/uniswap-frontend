@@ -150,12 +150,15 @@ export default function LoginModal({ isOpen, onClose, onSuccess }) {
                     onChange={(e) => setCarrera(e.target.value)}
                   >
                     <option value="">Selecciona tu carrera</option>
-                    <option value="Sistemas">Ingeniería de Sistemas</option>
-                    <option value="Electrónica">Ingeniería Electrónica</option>
-                    <option value="Civil">Ingeniería Civil</option>
-                    <option value="Industrial">Ingeniería Industrial</option>
-                    <option value="Mecánica">Ingeniería Mecánica</option>
-                    <option value="Química">Ingeniería Química</option>
+                   <option value="Sistemas">Ingeniería de Sistemas</option>
+                  <option value="Electrónica">Ingeniería Electrónica</option>
+                  <option value="Civil">Ingeniería Civil</option>
+                  <option value="Industrial">Ingeniería Industrial</option>
+                  <option value="Mecánica">Ingeniería Mecánica</option>
+                  <option value="Química">Ingeniería Química</option>
+                  <option value="Arquitectura">Arquitectura</option>
+                  <option value="Computacion">Ingeniería de Computación</option>
+                  <option value="Telecomunicaciones">Ingeniería de Telecomunicaciones</option>
                   </select>
                 </div>
               </div>
