@@ -339,6 +339,11 @@ export default function Perfil() {
                   <option value="Industrial">Ingeniería Industrial</option>
                   <option value="Mecánica">Ingeniería Mecánica</option>
                   <option value="Química">Ingeniería Química</option>
+                  <option value="Arquitectura">Arquitectura</option>
+                  <option value="Computacion">Ingeniería de Computación</option>
+                  <option value="Telecomunicaciones">Ingeniería de Telecomunicaciones</option>
+        
+                  
                 </select>
               ) : (
                 <span className={formData.carrera ? "text-gray-800 dark:text-gray-200" : "text-gray-400 dark:text-gray-500"}>
