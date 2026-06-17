@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Leaf, RefreshCw, Users, TrendingUp, Heart, ArrowRight } from "lucide-react";
+import Arbol3D from '../components/Arbol3D';
 
 export default function Home() {
   const [estadisticas, setEstadisticas] = useState({
@@ -47,6 +48,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
+      
       <section className="relative bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl overflow-hidden shadow-2xl mb-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative px-6 py-20 md:py-28 text-center text-white">
@@ -67,6 +69,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      <Arbol3D />
       
       {/* Stats Section */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
